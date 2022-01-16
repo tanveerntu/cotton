@@ -17,6 +17,15 @@ from plotly import graph_objs as go
 import pandas as pd
 import streamlit as st 
 
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 # Use the full page instead of a narrow central column
 st.set_page_config(layout='wide')
 st.title("Cotton Production in Pakistan")
