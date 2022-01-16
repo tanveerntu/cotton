@@ -11,10 +11,8 @@
 ######
 #Required imports
 
-from turtle import color
 import plotly.express as px
 from plotly import graph_objs as go
-from plotly.subplots import make_subplots
 
 import pandas as pd
 import streamlit as st 
