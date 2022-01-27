@@ -252,7 +252,7 @@ fig.add_annotation(
             text="Cotton Production",
             font=dict(family='Fjalla one', color='#006BA2', size=36), 
             xref="x domain", yref="y domain",
-            x=0, y=1.22, 
+            x=0, y=1.26, 
             showarrow=False,
             arrowhead=1)
 
@@ -261,7 +261,7 @@ fig.add_annotation(
             text=f"in different Pakistani districts during 2021-22",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
-            x=0, y=1.11, 
+            x=0, y=1.14, 
             showarrow=False,
             arrowhead=1)
 
@@ -269,7 +269,7 @@ fig.add_annotation(
             text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
-            x=0, y=-0.8, 
+            x=0, y=-0.95, 
             showarrow=False,
             arrowhead=1)
 
