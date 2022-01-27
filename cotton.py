@@ -146,7 +146,7 @@ fig.add_trace(go.Bar(
 fig.update_traces(texttemplate='%{text:.2s}', textposition='auto', textfont_size=24, textfont_family='roboto', textfont_color="#111111")
 
 fig.update_layout(
-    autosize=True, height=650, width=1050,
+    autosize=True, height=600, width=1050,
     margin=dict(t=100, b=120, l=40, r=40),
     plot_bgcolor='#ffffff',
     paper_bgcolor='#ffffff',
@@ -224,7 +224,7 @@ fig.add_trace(go.Bar(x=df_latest_year['District'], y=df_latest_year['Bales'],
                     hovertemplate='%{x} <br>Cotton Bales: %{y}'
                     ))
 fig.update_layout(
-    autosize=False, height=650, width=1050,
+    autosize=False, height=600, width=1050,
     legend_traceorder="reversed",
     margin=dict(t=90, b=40, l=40, r=40),
     #title="Cotton Production in Pakistan",
@@ -338,7 +338,7 @@ fig.add_trace(go.Scatter(
 ))
 
 fig.update_layout(
-    autosize=True, height=650, width=1050,
+    autosize=True, height=600, width=1050,
     margin=dict(t=90, b=120, l=40, r=40),
     plot_bgcolor='#ffffff',
     paper_bgcolor='#ffffff',
@@ -426,7 +426,7 @@ fig.update_layout(mapbox_style="open-street-map")
 
 
 fig.update_layout(
-    autosize=True, height=700, width=1400,
+    autosize=True, height=600, width=1050,
 )
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 st.plotly_chart(fig, use_container_width=True)
