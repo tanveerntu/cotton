@@ -27,7 +27,9 @@ df = pd.read_csv('cotton_districts.csv')
 year = df["Year"]
 latest_year = year.max()
 #filter data for latest_year
+df
 df_latest_year = df[df['Year'] == latest_year].sort_values(by='Bales')
+df_latest_year
 
 #shorten name of a district for better display on chart
 #df['District'] = df['District'].replace('Shaheed Benazirabad', 'Benazirabad')
