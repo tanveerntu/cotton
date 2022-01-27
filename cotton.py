@@ -19,6 +19,16 @@ import streamlit as st
 
 # Use the full page instead of a narrow central column
 st.set_page_config(layout='wide')
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 st.title("Cotton Production in Pakistan")
 st.write("Data Source: Pakistan Cotton Ginners Association; Analysis by: National Textile University")
 
