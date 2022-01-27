@@ -258,7 +258,7 @@ fig.add_annotation(
 
 #subtitle
 fig.add_annotation(
-            text=f"in different Pakistani districts during 2021-22",
+            text=f"in different Pakistani districts during 2021-22 season",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
             x=0, y=1.16, 
