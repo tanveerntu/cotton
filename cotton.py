@@ -50,7 +50,7 @@ fig_cd.add_trace(go.Bar(x=df_yearly['Year'], y=df_yearly['Bales_sum'],
                     hovertemplate='%{x} <br>Cotton Bales: %{y}'
                     ))
 fig_cd.update_layout(
-    autosize=False, height=650, width=1050,
+    autosize=False, height=600, width=1050,
     legend_traceorder="reversed",
     margin=dict(t=90, b=40, l=40, r=40),
     #title="Cotton Production in Pakistan",
