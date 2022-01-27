@@ -76,7 +76,7 @@ fig_cd.add_annotation(
             text="Cotton Production",
             font=dict(family='Fjalla one', color='#006BA2', size=36), 
             xref="x domain", yref="y domain",
-            x=0, y=1.15, 
+            x=0, y=1.17, 
             showarrow=False,
             arrowhead=1)
 
@@ -85,7 +85,7 @@ fig_cd.add_annotation(
             text="in Pakistan over the last few years",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
-            x=0, y=1.08, 
+            x=0, y=1.1, 
             showarrow=False,
             arrowhead=1)
 
@@ -173,7 +173,7 @@ fig.add_annotation(
             text="Cotton Production",
             font=dict(family='Fjalla one', color='#006BA2', size=36), 
             xref="x domain", yref="y domain",
-            x=0, y=1.19, 
+            x=0, y=1.21, 
             showarrow=False,
             arrowhead=1)
 
@@ -182,7 +182,7 @@ fig.add_annotation(
             text=f"in different Pakistani provinces over the last few years",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
-            x=0, y=1.11, 
+            x=0, y=1.13, 
             showarrow=False,
             arrowhead=1)
 
@@ -252,7 +252,7 @@ fig.add_annotation(
             text="Cotton Production",
             font=dict(family='Fjalla one', color='#006BA2', size=36), 
             xref="x domain", yref="y domain",
-            x=0, y=1.26, 
+            x=0, y=1.28, 
             showarrow=False,
             arrowhead=1)
 
@@ -261,7 +261,7 @@ fig.add_annotation(
             text=f"in different Pakistani districts during 2021-22",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
-            x=0, y=1.14, 
+            x=0, y=1.16, 
             showarrow=False,
             arrowhead=1)
 
@@ -269,7 +269,7 @@ fig.add_annotation(
             text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
-            x=0, y=-0.93, 
+            x=0, y=-0.92, 
             showarrow=False,
             arrowhead=1)
 
