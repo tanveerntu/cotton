@@ -24,12 +24,7 @@ st.write("Data Source: Pakistan Cotton Ginners Association; Analysis by: Nationa
 
 #importing csv file as dataframe
 df = pd.read_csv('cotton_districts.csv')
-year = df["Year"]
-latest_year = year.max()
-#filter data for latest_year
-df
-df_latest_year = df[df['Year'] == latest_year].sort_values(by='Bales')
-df_latest_year
+
 
 #shorten name of a district for better display on chart
 #df['District'] = df['District'].replace('Shaheed Benazirabad', 'Benazirabad')
@@ -212,7 +207,11 @@ st.plotly_chart(fig, use_container_width=True) # to show Figure; container width
 ############################
 # district-wise chart
 ###########################
+year = df["Year"]
+latest_year = year.max()
+#filter data for latest_year
 
+df_latest_year = df[df['Year'] == latest_year]
 
 fig = go.Figure()
 # Add traces
