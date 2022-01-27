@@ -207,11 +207,10 @@ st.plotly_chart(fig, use_container_width=True) # to show Figure; container width
 ############################
 # district-wise chart
 ###########################
-year = df["Year"]
-latest_year = year.max()
+
 #filter data for latest_year
 
-df_latest_year = df[df['Year'] == latest_year]
+df_latest_year = df[df['Year'] == 2022]
 
 fig = go.Figure()
 # Add traces
@@ -260,7 +259,7 @@ fig.add_annotation(
 
 #subtitle
 fig.add_annotation(
-            text=f"in different Pakistani districts during {1-latest_year}-{latest_year} season",
+            text=f"in different Pakistani districts during 2021-22",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
             x=0, y=1.11, 
