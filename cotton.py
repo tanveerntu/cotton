@@ -210,8 +210,7 @@ st.plotly_chart(fig, use_container_width=True) # to show Figure; container width
 
 #filter data for latest_year
 
-df_latest_year = df[df['Year'] == '2022']
-
+df_latest_year = df[df['Period'] == '2021-22']
 fig = go.Figure()
 # Add traces
 fig.add_trace(go.Bar(x=df_latest_year['District'], y=df_latest_year['Bales'],
