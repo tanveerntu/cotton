@@ -269,7 +269,7 @@ fig.add_annotation(
             text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
-            x=0, y=-0.95, 
+            x=0, y=-0.93, 
             showarrow=False,
             arrowhead=1)
 
