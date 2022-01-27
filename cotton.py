@@ -76,7 +76,7 @@ fig_cd.add_annotation(
             text="Cotton Production",
             font=dict(family='Fjalla one', color='#006BA2', size=36), 
             xref="x domain", yref="y domain",
-            x=0, y=1.17, 
+            x=0, y=1.18, 
             showarrow=False,
             arrowhead=1)
 
