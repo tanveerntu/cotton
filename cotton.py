@@ -50,7 +50,7 @@ df_yearly = df.groupby(['Year']).agg(Bales_sum=('Bales', 'sum')).reset_index()
 fig_cd = go.Figure()
 # Add traces
 fig_cd.add_trace(go.Bar(x=df_yearly['Year'], y=df_yearly['Bales_sum'],
-                    name='Cotton Bales', 
+                    name='', 
                     text=df_yearly['Bales_sum'], #text on bars
                     textfont_size=24, #text on bars
                     textfont_family='roboto',
@@ -224,7 +224,7 @@ df_latest_year = df[df['Period'] == '2021-22']
 fig = go.Figure()
 # Add traces
 fig.add_trace(go.Bar(x=df_latest_year['District'], y=df_latest_year['Bales'],
-                    name='Cotton Bales', 
+                    name='', 
                     text=df_latest_year['Bales'], #text on bars
                     textfont_size=24, #text on bars
                     textfont_family='roboto',
