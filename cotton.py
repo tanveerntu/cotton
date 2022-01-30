@@ -23,7 +23,7 @@ from datetime import datetime, timedelta
 # Use the full page instead of a narrow central column
 
 st.set_page_config(
-    page_title = 'PAKISTAN TRADE STATISTICS',
+    page_title = 'Cotton Production in Pakistan',
     page_icon = '✅',
     layout = 'wide'
 )
