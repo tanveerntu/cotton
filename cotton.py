@@ -497,8 +497,8 @@ fig.add_trace(go.Scatter(x=[df_h['Year'].iloc[-1]],
                          mode='markers+text',
                          marker=dict(color='red', size=14),
                          #textfont=dict(color='green', size=20),
-                         textposition='top right',
-                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=16),
+                         textposition='top center',
+                         textfont=dict(family="fjalla one, sans-serif", color="red", size=24),
                          showlegend=False))
 
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
