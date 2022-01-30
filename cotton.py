@@ -16,6 +16,9 @@ from plotly import graph_objs as go
 
 import pandas as pd
 import streamlit as st 
+import yfinance as yf
+
+from datetime import datetime, timedelta
 
 # Use the full page instead of a narrow central column
 st.set_page_config(layout='wide')
@@ -449,9 +452,7 @@ st.plotly_chart(fig, use_container_width=True)
 ##############################
 #Cotton prices
 #############################
-import yfinance as yf
 
-from datetime import datetime, timedelta
 
 #data = yf.download(tickers=stock_price, period = ‘how_many_days’, interval = ‘how_long_between_each_check’, rounding= bool)
 #data = yf.download(tickers='CT=F', period = '5Y', interval = '1D', rounding= True)
