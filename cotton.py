@@ -413,6 +413,95 @@ fig.update_layout(legend=dict(
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
 
 ###############################
+##############################
+#Historical cotton data
+#########################
+
+##############################
+df_h = pd.read_csv('cotton_historical.csv')
+
+fig = go.Figure()
+# Add traces
+
+fig.add_trace(go.Scatter(
+    x=df_h["Year"], 
+    y=df_h["Bales"], 
+    name="", 
+    mode="markers+lines",
+    marker=dict(size=12, color="#106ea0"),
+    line=dict(width=5, color="#106ea0"),
+    showlegend=False
+))
+fig.update_layout(
+    autosize=False, height=650, width=1050,
+    legend_traceorder="reversed",
+    margin=dict(t=90, b=40, l=40, r=40),
+    xaxis_title='', yaxis_title="No. of Bales",
+    plot_bgcolor='#ffffff',
+    paper_bgcolor='#ffffff',
+)
+
+fig.update_xaxes(showline=True, linewidth=2, linecolor='black')
+fig.update_yaxes(showline=True, linewidth=2, linecolor='black')
+
+fig.update_xaxes(tickangle=0, tickfont=dict(family='Roboto', color='black', size=24))
+fig.update_yaxes(tickangle=0, tickfont=dict(family='Roboto', color='black', size=24))
+fig.update_yaxes(title_font=dict(family='Roboto', color='black', size=24))
+
+#fig_cd.update_xaxes(font=dict(color='#111111', size=24, family="roboto, sans-serif"))
+
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='#758D99')
+#adding range buttons
+
+fig.update_xaxes(
+rangeslider_visible = False, 
+    rangeselector = dict(
+    buttons = list([
+    dict(count = 1, label = '1Y', step = 'year', stepmode = 'backward'),
+    dict(count = 2, label = '2Y', step = 'year', stepmode = 'backward'),
+    dict(count = 5, label = '5Y', step = 'year', stepmode = 'backward'),
+    #dict(step = 'all')
+    ])))
+
+
+
+#title
+fig.add_annotation(
+            text="Cotton Production in Pakistan",
+            font=dict(family='Fjalla one', color='#006BA2', size=36), 
+            xref="x domain", yref="y domain",
+            x=0, y=1.15, 
+            showarrow=False,
+            arrowhead=1)
+
+#subtitle
+fig.add_annotation(
+            text="since season 1947-48",
+            font=dict(family='roboto', color='black', size=24), 
+            xref="x domain", yref="y domain",
+            x=0, y=1.08, 
+            showarrow=False,
+            arrowhead=1)
+#datasource
+fig.add_annotation(
+            text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
+            font=dict(family='Roboto', color='#758D99', size=20), 
+            xref="x domain", yref="y domain",
+            x=0, y=-0.13, 
+            showarrow=False,
+            arrowhead=1)
+#Adding only the last date point value/text
+fig.add_trace(go.Scatter(x=[df_h['Year'].iloc[-1]],
+                         y=[df_h['Bales'].iloc[-1]],
+                         text=[df_h['Bales'].iloc[-1]],
+                         mode='markers+text',
+                         marker=dict(color='red', size=14),
+                         #textfont=dict(color='green', size=20),
+                         textposition='top right',
+                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=16),
+                         showlegend=False))
+
+st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
 
 ###########################
 ###########################
