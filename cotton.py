@@ -445,4 +445,114 @@ st.plotly_chart(fig, use_container_width=True)
 
 #######################################
 ##############################
+#######################################
+##############################
+#Cotton prices
+#############################
+import yfinance as yf
+
+from datetime import datetime, timedelta
+
+#data = yf.download(tickers=stock_price, period = ‘how_many_days’, interval = ‘how_long_between_each_check’, rounding= bool)
+#data = yf.download(tickers='CT=F', period = '5Y', interval = '1D', rounding= True)
+data = yf.download(tickers='CT=F', start = '2017-01-01', end = datetime.now().date(), rounding= True)
+
+#data 
+data= data.reset_index() # to show date as column header
+#data 
+
+## getting the live ticker price
+
+# import stock_info module from yahoo_fin
+from yahoo_fin import stock_info as si
+
+#to get live price of ticker/cotton CT=F
+price = si.get_live_price('CT=F')
+prev_close = data.Close.iloc[-2] #iloc[-2] is second last row of res_df ; iloc[0] is first row 
+
+
+##
+
+fig = go.Figure()
+
+fig.add_trace(go.Scatter(x=data['Date'], 
+                        y=data['Close'], 
+                        name = '',
+                        texttemplate='%{text:.2s}', # to  shorten text into 3 digits, use '%{text:.3s}'
+                        ))
+fig.update_traces(hovertemplate='Date: %{x} <br>Price: %{y} cents per pound') #<br> adds space or shifts to next line; x & y is repected axis value; 
+
+fig.add_trace(go.Indicator(
+            domain={"x": [0, 1], "y": [0.98, 1]},
+            value=price,
+            mode="number+delta",
+            number={"font":{"size":50, "color":'#111111', "family":"roboto"}},
+            title={"text": "Current Price in cents per pound"},
+            title_font=dict(size=25, color='#111111', family="roboto"),
+            delta={"reference": prev_close},
+        ))
+
+
+
+fig.update_yaxes(title_text = 'Cents Per Pound', tickprefix = '')
+#fig.update_xaxes(showspikes=True, spikecolor="red", spikesnap="cursor", spikemode="across", spikethickness=3) #xaxis spike on hover
+#fig.update_yaxes(showspikes=True, spikecolor="red", spikesnap="cursor", spikemode="across", spikethickness=3) #yais spike on hover
+
+fig.update_layout(
+    autosize=True, height=650, width=1050,
+    margin=dict(t=90, b=120, l=40, r=40),
+    plot_bgcolor='#ffffff',
+    paper_bgcolor='#ffffff',
+    font=dict(color='#111111', size=20, family="roboto, sans-serif"), 
+    bargap=0.2,                             #value can be An int or float in the interval [0, 1]
+)
+
+fig.update_xaxes(showline=True, linewidth=2, linecolor='black')
+fig.update_yaxes(showline=True, linewidth=2, linecolor='black')
+
+fig.update_xaxes(tickangle=0, tickfont=dict(family='Roboto', color='black', size=24))
+fig.update_yaxes(tickangle=0, tickfont=dict(family='Roboto', color='black', size=24))
+fig.update_yaxes(title_font=dict(family='Roboto', color='black', size=24))
+
+#fig_cd.update_xaxes(font=dict(color='#111111', size=24, family="roboto, sans-serif"))
+
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='#758D99')
+fig.update_yaxes(title="Cents Per Pound",
+    title_font=dict(size=25, color='#111111', family="roboto"),
+    )
+
+fig.update_xaxes(
+rangeslider_visible = False, color = 'black',
+    rangeselector = dict(
+    buttons = list([
+    dict(count = 1, label = '1W', step = 'day', stepmode = 'backward'),
+    dict(count = 1, label = '1M', step = 'month', stepmode = 'backward'),
+    dict(count = 6, label = '6M', step = 'month', stepmode = 'backward'),
+    dict(count = 1, label = 'YTD', step = 'year', stepmode = 'todate'),
+    dict(count = 1, label = '1Y', step = 'year', stepmode = 'backward'),
+    dict(count = 2, label = '2Y', step = 'year', stepmode = 'backward'),
+    dict(count = 5, label = '5Y', step = 'year', stepmode = 'backward'),
+    #dict(step = 'all')
+    ])))
+#title
+fig.add_annotation(
+            text="Cotton Rates/ICE Futures",
+            font=dict(family='Fjalla one', color='#006BA2', size=36), 
+            xref="x domain", yref="y domain",
+            x=0, y=1.19, 
+            showarrow=False,
+            arrowhead=1)
+
+
+fig.add_annotation(
+            text="Source: Yahoo Finance/National Textile University",
+            font=dict(family='Roboto', color='#111111', size=20), 
+            xref="x domain", yref="y domain",
+            x=0, y=-0.24, 
+            showarrow=False,
+            arrowhead=1)
+
+st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
+
+
 
