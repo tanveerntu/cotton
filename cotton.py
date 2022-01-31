@@ -11,7 +11,6 @@
 ######
 #Required imports
 
-from turtle import color
 import plotly.express as px
 from plotly import graph_objs as go
 import plotly.graph_objects as go
