@@ -497,8 +497,8 @@ fig.add_trace(go.Scatter(x=[df_h['Year'].iloc[-1]],
                          name='',
                          mode='markers+text',
                          marker=dict(color='red', size=14),
-                         textposition='top center',
-                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=24),
+                         textposition='top right',
+                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=20),
                          texttemplate='%{text:.3s}', #text shorten into 3 digits
                          showlegend=False))
 
@@ -510,7 +510,7 @@ fig.add_trace(go.Scatter(x=[df_h['Year'].iloc[57]],
                          mode='markers+text',
                          marker=dict(color='red', size=14),
                          textposition='middle right',
-                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=24),
+                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=20),
                          texttemplate='%{text:.3s}', #text shorten into 3 digits
                          showlegend=False))
 
