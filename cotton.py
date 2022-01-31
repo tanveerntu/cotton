@@ -476,7 +476,7 @@ fig.add_annotation(
 
 #subtitle
 fig.add_annotation(
-            text="since season 1947-48",
+            text="since 1947-48 season",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
             x=0, y=1.08, 
@@ -484,7 +484,7 @@ fig.add_annotation(
             arrowhead=1)
 #datasource
 fig.add_annotation(
-            text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
+            text="Source: Pakinstan Cotton Ginners Association/Karachi Cotton Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.13, 
@@ -494,12 +494,26 @@ fig.add_annotation(
 fig.add_trace(go.Scatter(x=[df_h['Year'].iloc[-1]],
                          y=[df_h['Bales'].iloc[-1]],
                          text=[df_h['Bales'].iloc[-1]],
+                         name='',
                          mode='markers+text',
                          marker=dict(color='red', size=14),
-                         #textfont=dict(color='green', size=20),
-                         textposition='top center',
-                         textfont=dict(family="fjalla one, sans-serif", color="red", size=24),
+                         textposition='top right',
+                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=24),
+                         texttemplate='%{text:.3s}', #text shorten into 3 digits
                          showlegend=False))
+
+#Adding value/text at year 2005, which is at index number 57
+fig.add_trace(go.Scatter(x=[df_h['Year'].iloc[57]],
+                         y=[df_h['Bales'].iloc[57]],
+                         text=[df_h['Bales'].iloc[57]],
+                         name='',
+                         mode='markers+text',
+                         marker=dict(color='red', size=14),
+                         textposition='middle right',
+                         textfont=dict(family="fjalla one, sans-serif", color="#006BA2", size=24),
+                         texttemplate='%{text:.3s}', #text shorten into 3 digits
+                         showlegend=False))
+
 
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
 
