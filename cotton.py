@@ -67,6 +67,18 @@ fig_cd.add_trace(go.Bar(x=df_yearly['Year'], y=df_yearly['Bales_sum'],
                     marker_color='#006BA2', #bar colors
                     hovertemplate='%{x} <br>Cotton Bales: %{y}'
                     ))
+from PIL import Image
+image = Image.open('logo.png')                    
+#st.image(logo.png)
+fig_cd.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
+
 fig_cd.update_layout(
     autosize=False, height=650, width=1050,
     legend_traceorder="reversed",
@@ -77,6 +89,7 @@ fig_cd.update_layout(
     plot_bgcolor='#ffffff',
     paper_bgcolor='#ffffff',
 )
+
 
 fig_cd.update_xaxes(showline=True, linewidth=2, linecolor='black')
 fig_cd.update_yaxes(showline=True, linewidth=2, linecolor='black')
@@ -148,7 +161,14 @@ fig.add_trace(go.Bar(
             name='Exports'
             ))
 
-
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
 fig.update_traces(texttemplate='%{text:.2s}', textposition='auto', textfont_size=24, textfont_family='roboto', textfont_color="#111111")
 
 fig.update_layout(
@@ -203,7 +223,7 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1))
+    x=0.8))
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
 
 ###############################
@@ -230,7 +250,14 @@ fig.add_trace(go.Bar(x=df_m['month'], y=df_m['bales_ytd'],
                     marker_color='#006BA2', #bar colors
                     ))
 
-
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
 ###############
 #layout
 fig.update_layout(
@@ -294,6 +321,14 @@ fig.add_trace(go.Bar(x=df_m['month'], y=df_m['usd_ytd'],
                     marker_color='#ff6b6c', #bar colors
                     ))
 
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
 ###############
 #layout
 fig.update_layout(
@@ -385,6 +420,15 @@ fig.add_trace(go.Bar(
             name='Baluchistan'
             ))
 
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
+
 fig.update_traces(texttemplate='%{text:.2s}', textposition='auto', textfont_size=24, textfont_family='roboto', textfont_color="#111111")
 
 fig.update_layout(
@@ -441,7 +485,7 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1))
+    x=0.8))
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
 
 
@@ -466,7 +510,17 @@ fig.add_trace(go.Bar(x=df_latest_year['District'], y=df_latest_year['Bales'],
                     textfont_family='roboto',
                     texttemplate='%{text:.3s}', # to text shorten into 3 digits, use '%{text:.3s}'
                     marker_color='#006BA2', #bar colors
+                    
                     ))
+
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
 fig.update_layout(
     autosize=False, height=650, width=1050,
     legend_traceorder="reversed",
@@ -519,6 +573,7 @@ fig.add_annotation(
 
 
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
+
 
 ########################
 ########################
@@ -581,6 +636,15 @@ fig.add_trace(go.Scatter(
     line=dict(width=5, color="#106ea0")
 ))
 
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
+
 fig.update_layout(
     autosize=True, height=650, width=1050,
     margin=dict(t=90, b=120, l=40, r=40),
@@ -635,7 +699,7 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1))
+    x=0.75))
 st.plotly_chart(fig, use_container_width=True) # to show Figure; container width true makes fig. size responsive
 
 ###############################
@@ -673,6 +737,15 @@ fig.add_trace(go.Scatter(
     line=dict(width=5, color="#106ea0"),
     showlegend=False
 ))
+
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
 fig.update_layout(
     autosize=False, height=650, width=1050,
     legend_traceorder="reversed",
@@ -875,7 +948,14 @@ fig.add_trace(go.Indicator(
             delta={"reference": prev_close},
         ))
 
-
+fig.add_layout_image(
+    dict(
+        source=image,
+        xref="paper", yref="paper",
+        x=1, y=1,  #image postion on chart
+        sizex=0.15, sizey=0.15, #image size on chart
+        xanchor="right", yanchor="bottom"
+    ))
 
 fig.update_yaxes(title_text = 'Cents Per Pound', tickprefix = '')
 #fig.update_xaxes(showspikes=True, spikecolor="red", spikesnap="cursor", spikemode="across", spikethickness=3) #xaxis spike on hover
