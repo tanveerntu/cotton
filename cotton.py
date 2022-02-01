@@ -287,7 +287,7 @@ fig.add_annotation(
 
 #subtitle
 fig.add_annotation(
-            text="in Pakistan in the current financial year 2021-22 (Cumulative No. of Bales imported till recent month)",
+            text="in Pakistan in the current financial year 2021-22",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
             x=0, y=1.10, 
@@ -465,7 +465,7 @@ fig.add_annotation(
 
 #subtitle
 fig.add_annotation(
-            text=f"in different Pakistani provinces over the last few years of the closing season",
+            text=f"in different Pakistani provinces over the last few years",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
             x=0, y=1.11, 
