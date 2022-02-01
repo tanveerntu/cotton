@@ -679,7 +679,7 @@ fig.add_annotation(
 
 #subtitle
 fig.add_annotation(
-            text=f"in Pakistani factories during the last few years",
+            text=f"in Pakistani factories",
             font=dict(family='roboto', color='black', size=24), 
             xref="x domain", yref="y domain",
             x=0, y=1.11, 
