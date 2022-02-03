@@ -121,7 +121,7 @@ fig_cd.add_annotation(
             arrowhead=1)
 #datasource
 fig_cd.add_annotation(
-            text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
+            text="Source: Pakistan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.13, 
@@ -210,7 +210,7 @@ fig.add_annotation(
             arrowhead=1)
 #datasource
 fig.add_annotation(
-            text="Source: Pakinstan Bureau of Statistics/National Textile University, Pakistan",
+            text="Source: Pakistan Bureau of Statistics/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.13, 
@@ -295,7 +295,7 @@ fig.add_annotation(
             arrowhead=1)
 #data reference
 fig.add_annotation(
-            text="Source: Pakinstan Bureau of Statistics/National Textile University, Pakistan",
+            text="Source: Pakistan Bureau of Statistics/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.18, 
@@ -366,7 +366,7 @@ fig.add_annotation(
             arrowhead=1)
 #data reference
 fig.add_annotation(
-            text="Source: Pakinstan Bureau of Statistics/National Textile University, Pakistan",
+            text="Source: Pakistan Bureau of Statistics/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.18, 
@@ -473,7 +473,7 @@ fig.add_annotation(
             arrowhead=1)
 
 fig.add_annotation(
-            text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
+            text="Source: Pakistan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.24, 
@@ -564,7 +564,7 @@ fig.add_annotation(
             arrowhead=1)
 
 fig.add_annotation(
-            text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
+            text="Source: Pakistan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.75, 
@@ -687,7 +687,7 @@ fig.add_annotation(
             arrowhead=1)
 
 fig.add_annotation(
-            text="Source: Pakinstan Cotton Ginners Association/National Textile University, Pakistan",
+            text="Source: Pakistan Cotton Ginners Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.24, 
@@ -800,7 +800,7 @@ fig.add_annotation(
             arrowhead=1)
 #datasource
 fig.add_annotation(
-            text="Source: Pakinstan Cotton Ginners Association/Karachi Cotton Association/National Textile University, Pakistan",
+            text="Source: Pakistan Cotton Ginners Association/Karachi Cotton Association/National Textile University, Pakistan",
             font=dict(family='Roboto', color='#758D99', size=20), 
             xref="x domain", yref="y domain",
             x=0, y=-0.13, 
